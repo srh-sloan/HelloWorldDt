@@ -39,6 +39,8 @@
     Animal * a = [[Animal alloc] init];
     [zoo addAnimalsObject: a];
     GHTestLog(@"Zoo after added animal: %@", zoo);
+    [zoo addAnimalsObject:t];
+    GHTestLog(@"Zoo after added tiger: %@", zoo);
 }
 
 @end
