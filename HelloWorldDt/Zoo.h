@@ -11,7 +11,7 @@
 
 @interface Zoo : NSObject
 
-@property (copy, nonatomic) NSMutableArray * animals;
+@property /*(copy, nonatomic)*/(assign, readwrite) NSMutableArray * animals;
 
 -(void) addAnimalsObject:(Animal*)object;
 

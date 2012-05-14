@@ -15,12 +15,13 @@
 
 -(id) init {
     if(self = [super init]){
-        self.animals = [[NSMutableArray alloc] init];
+        self.animals = [NSMutableArray array];
     }
     return self;
 }
 
 -(void) addAnimalsObject: (Animal*) a {
+    NSLog(@"in addAnimalsObject:");
     if(self.animals){
         [self.animals addObject: a];
     } else {
@@ -30,6 +31,7 @@
 }
 
 -(NSString*) description {
+    NSLog(@"in desc");
     return [[NSString alloc] initWithFormat:@"Animals in zoo: %d", [self.animals count]];
 }
 
